@@ -1,0 +1,130 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <script src="js/jquery.min.js"></script>
+	</head>
+	<body>
+
+		<div class="container bg-dark" style="z-index: 0;">
+	<nav class="navbar navbar-expand-sm fixed-top bg-dark">
+	<button class="navbar-toggler" data-toggle="collapse" data-target="#header"><span class="navbar-toggler-icon bg-light">=</span></button>
+	<a class="navbar-brand text-light" href="index.html"><span style="font-size:1.8em; ">BitsGo</span></a>
+	<div class="collapse navbar-collapse"  id="header">
+	<ul class="navbar-nav ml-auto list-unstyled">
+		<li class="navbar-item "><a class="nav-link text-light" style="font-size:1.2em;" href="index.html">Home</a></li>
+		<li class="navbar-item "><a class="nav-link text-light" style="font-size:1.2em;" href="">Login</a></li>
+		<li class="navbar-item "><a class="nav-link text-light" style="font-size:1.2em;" href="">Travel</a></li>
+		<li class="navbar-item "><a class="nav-link text-light" style="font-size:1.2em;" href="">Emergency</a></li> 
+	</ul></div>
+	</nav>
+</div>	
+
+<div class="container bg-dark" style="visibility: hidden;">
+	<nav class="navbar navbar-expand-sm fixed-top bg-dark">
+	<button class="navbar-toggler" data-toggle="collapse" data-target="#header"><span class="navbar-toggler-icon"></span></button>
+	<a class="navbar-brand text-light" href="index.html">BitsGo</a>
+	<div class="collapse navbar-collapse"  id="header">
+	<ul class="navbar-nav ml-auto list-unstyled" >
+		<li class="navbar-item"><a class="nav-link text-light" href="index.html">Home</a></li>
+		<li class="navbar-item"><a class="nav-link text-light" href="">Login</a></li>
+		<li class="navbar-item"><a class="nav-link text-light" href="">Travel</a></li>
+		<li class="navbar-item"><a class="nav-link text-light"  href="">Emergency</a></li> 
+	</ul></div>
+	</nav>
+</div>
+
+
+<br><br><br><br>
+
+
+        <div class="col-md-8">
+            <input id="input" type="text" placeholder="Search Box">
+            <button onclick="init();">Search</button>
+            
+            
+        </div>
+        <br>
+        <div id="map-tile">
+        	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d984973.5463676593!2d73.45178034773515!3d15.346513156844884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfba106336b741%3A0xeaf887ff62f34092!2sGoa!5e0!3m2!1sen!2sin!4v1605299868327!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+
+
+        
+        <script>
+      
+        
+        	function init(){
+        	if(document.getElementById("input").value=="bogmalo" || document.getElementById("input").value=="bog"){
+        	    document.getElementById("map-tile").innerHTML = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.136691527568!2d73.8305496641306!3d15.369081689316772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc7fd71740d5b%3A0x9de416b4cd2dc99c!2sBogmalo%20Beach!5e0!3m2!1sen!2sin!4v1605294989682!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"></iframe>"; 
+        	    return;
+        	}
+        	
+        	else if(document.getElementById("input").value=="baga"){
+        		document.getElementById("map-tile").innerHTML = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7687.3061253312!2d73.74639117164494!3d15.55671850679711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfea1cd8a1deff%3A0xba7066c0ee35c1e0!2sBaga%20Beach!5e0!3m2!1sen!2sin!4v1605383023795!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"></iframe>";
+        		return;
+        	}
+
+        	else if(document.getElementById("input").value=="calangute"){
+        		document.getElementById("map-tile").innerHTML = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30750.700715061423!2d73.73617987749252!3d15.54683485913652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfea0148f4ed2b%3A0xcb592fad5d257d17!2sCalangute%20Beach!5e0!3m2!1sen!2sin!4v1605384090822!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"></iframe>";
+        		return;
+        	}
+
+        	else if(document.getElementById("input").value=="candolim"){
+        		document.getElementById("map-tile").innerHTML = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.375747510644!2d73.76042351413295!3d15.517974889223492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc13c227bd1bf%3A0xfa2f8c6c1efa4aef!2sCandolim%20Beach!5e0!3m2!1sen!2sin!4v1605384234085!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"></iframe>";
+        		return;
+        	}
+        	else if(document.getElementById("input").value=="palolem"){
+        		document.getElementById("map-tile").innerHTML = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7707.401999093984!2d74.0170197716103!3d15.009294108172687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbe4551d05b02bb%3A0x1e1bc67d4b0fbbf5!2sPalolem%20Beach!5e0!3m2!1sen!2sin!4v1605384403859!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"></iframe>";
+        		return;
+        	}
+        	else if(document.getElementById("input").value=="se cathedral"){
+        		document.getElementById("map-tile").innerHTML = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.638281376635!2d73.91000311413276!3d15.503876889232352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfbef32db44613%3A0xc94c4740248a9cf0!2sSe%20Cathedral!5e0!3m2!1sen!2sin!4v1605461528888!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"></iframe>";
+        		return;
+        	}
+        	else if(document.getElementById("input").value=="sao pedro"){
+        		document.getElementById("map-tile").innerHTML = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.704687993631!2d73.8950600141327!3d15.500308889234605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfbefa93326eeb%3A0x86278c84c0a7584b!2sS%C3%A3o%20Pedro%20Church!5e0!3m2!1sen!2sin!4v1605462812676!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"></iframe>";
+        		return;
+        	}
+        	else if(document.getElementById("input").value=="w goa"){
+        		document.getElementById("map-tile").innerHTML = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.7975168751686!2d73.7347590141343!3d15.602463589170759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfe96f8008739f%3A0x466052ed5d25e27e!2sW%20Goa!5e0!3m2!1sen!2sin!4v1605463110300!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"></iframe>";
+        		return;
+
+        	}
+        	else if(document.getElementById("input").value=="novotel"){
+        		document.getElementById("map-tile").innerHTML = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.3337201195204!2d73.76731431413297!3d15.520230589222075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc1950b98ff5b%3A0xd6abeee9e2b05a0e!2sNovotel%20Goa%20Resort%20%26%20Spa!5e0!3m2!1sen!2sin!4v1605463221385!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"></iframe>";
+        		return;
+        	}
+        	else if(document.getElementById("input").value=="resort rio"){
+        		document.getElementById("map-tile").innerHTML = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3843.5055146938653!2d73.75677501413371!3d15.56461708919436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfea19d6987849%3A0x3e1532f5d8f0136e!2sResort%20Rio!5e0!3m2!1sen!2sin!4v1605463284902!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"></iframe>";
+        		return;
+        	}
+        	else if(document.getElementById("input").value=="the baga beach resort"){
+        		document.getElementById("map-tile").innerHTML = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3843.6743301068555!2d73.75048361413356!3d15.555579689200066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfea1c2840a939%3A0xae5bc024b2973552!2sThe%20Baga%20Beach%20Resort!5e0!3m2!1sen!2sin!4v1605463354394!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"></iframe>";
+        		return;
+        	}
+
+        	else{
+        		document.getElementById("map-tile").innerHTML = "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d984973.5463676593!2d73.45178034773515!3d15.346513156844884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfba106336b741%3A0xeaf887ff62f34092!2sGoa!5e0!3m2!1sen!2sin!4v1605294760658!5m2!1sen!2sin\" width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"></iframe>";
+        		return;
+        	}
+}
+        </script>
+    </body> 
+</html>

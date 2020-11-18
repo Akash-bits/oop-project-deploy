@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OOPS-Project</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	</script>
+
+	<script>
+	function display()
+	{
+		// document.getElementById("beaches-set").innerHTML+="<p>hello</p>";
+		var beachSet=[
+		["Calangute Beach","./beaches/calangute.jpg","Big, popular beach with water sports, such as boating, water skiing & parasailing, plus food stalls"],
+		["Baga Beach","./beaches/baga.jpeg","recreation area with water sports, eateries, bars, nightspots & a festive atmosphere"],
+		["Candolim Beach","./beaches/candolim.jpeg","Candolim beach is sandy beach with enough place to enjoy rest. Not so crowded like the Baga n Calangute"],
+		["Palolem Beach","./beaches/palolem.jpg","A beach lover’s paradise, and voted in the top 25 beaches of India "]];
+
+		var resortSet=[["Novotel Goa","./resorts/novotel.jpg","Set in a Balinese-style garden.There's an airy international restaurant and a Mediterranean eatery."],
+		["W-Goa","./resorts/W-Goa.jpg","In tropical gardens near a beach."],
+		["Resort-Rio","./resorts/resort-rio.jpg","Set along the Baga River and surrounded by tropical vegetation.Elegant restaurants, including Italian and vegetarian options. "],
+		["The Baga Beach Resort","./resorts/the-baga-beach-resort.jpg","There's an open-air restaurant, a bar and an outdoor pool. The funky grounds have hammocks and sculptural wood objects."]];
+
+		var churchSet=[["Se Cathedral Church" ,"./churches/Se-Cathedral.jpg","The Se Cathedral's tower houses a large bell known as the Golden Bell on account of its rich tone. It is said to be the largest in Goa, and one of the best in the world"],
+		["São Pedro Church ", "./churches/São-Pedro-Church.jpg","Not as monumental as some of the other churches in Goa, the Sao Pedro (Saint Peter's) Church is a quiet, unassuming little chapel"],
+		["Churches and convents of Goa","./churches/Churches-and-convents-of-Goa.jpg","Located in Goa Velha, in the state of Goa, India, it was declared a World Heritage Site in 1986."]];
+
+		for(var i=0;i<beachSet.length;i++)
+		{
+			var txt= '<div class="media "><img class="col-4 d-flex mr-3 img-thumbnail align-self-center img-fluid" src='+beachSet[i][1]+'><div class="media-body"><a href="Beach/Beach.html#beach'+(i+1)+'"><h2 class="mt-0">'+beachSet[i][0]+'</h2></a><h4>Popular For: '+beachSet[i][2] +'</h4><p class="d-none d-sm-block"></p></div></div>';
+			document.getElementById("beaches-set").innerHTML+=txt;
+		}
+		for(var i=0;i<resortSet.length;i++)
+		{
+			var txt= '<div class="media "><img class="col-4 d-flex mr-3 img-thumbnail align-self-center img-fluid" src='+resortSet[i][1]+'><div class="media-body"><a href="Resort/Resort.html#resort'+(i+1)+'"><h2 class="mt-0">'+resortSet[i][0]+'</h2></a><h4>Popular For: '+resortSet[i][2] +'</h4> <p class="d-none d-sm-block"></p></div></div>';
+			document.getElementById("resorts-set").innerHTML+=txt;
+		}
+		for(var i=0;i<churchSet.length;i++)
+		{
+			var txt= '<div class="media "><img class="col-4 d-flex mr-3 img-thumbnail align-self-center img-fluid" src='+churchSet[i][1]+'><div class="media-body"><a href="churches.html#church'+(i+1)+'"><h2 class="mt-0">'+churchSet[i][0]+'</h2></a><h4>Popular For: '+churchSet[i][2] +'</h4> <p class="d-none d-sm-block"></p></div></div>';
+			document.getElementById("churches-set").innerHTML+=txt;
+		}
+
+	}
+
+	</script>
+
+	<!-- <style>
+		.text-light {
+			color: white;
+		}
+	</style>  -->
+
+
+</head>
+<body onload="display()">
+
+<div class="container bg-dark" style="z-index: 0;">
+	<nav class="navbar navbar-expand-sm fixed-top bg-dark">
+	<button class="navbar-toggler" data-toggle="collapse" data-target="#header"><span class="navbar-toggler-icon bg-light">=</span></button>
+	<a class="navbar-brand text-light" href="index.html"><span style="font-size:1.8em; ">BitsGo</span></a>
+	<div class="collapse navbar-collapse"  id="header">
+	<ul class="navbar-nav ml-auto list-unstyled">
+		<li class="navbar-item "><a class="nav-link text-light" style="font-size:1.2em;" href="index.html">Home</a></li>
+		<li class="navbar-item "><a class="nav-link text-light" style="font-size:1.2em;" href="login.html">Login</a></li>
+		<li class="navbar-item "><a class="nav-link text-light" style="font-size:1.2em;" href="travel.html">Travel</a></li>
+		<li class="navbar-item "><a class="nav-link text-light" style="font-size:1.2em;" href="">Emergency</a></li>
+	</ul></div>
+	</nav>
+</div>
+
+<div class="container bg-dark" style="visibility: hidden;">
+	<nav class="navbar navbar-expand-sm fixed-top bg-dark">
+	<button class="navbar-toggler" data-toggle="collapse" data-target="#header"><span class="navbar-toggler-icon"></span></button>
+	<a class="navbar-brand text-light" href="index.html">BitsGo</a>
+	<div class="collapse navbar-collapse"  id="header">
+	<ul class="navbar-nav ml-auto list-unstyled" >
+		<li class="navbar-item"><a class="nav-link text-light" href="index.html">Home</a></li>
+		<li class="navbar-item"><a class="nav-link text-light" href="login.html">Login</a></li>
+		<li class="navbar-item"><a class="nav-link text-light" href="travel.html">Travel</a></li>
+		<li class="navbar-item"><a class="nav-link text-light"  href="">Emergency</a></li>
+	</ul></div>
+	</nav>
+</div>
+
+
+<br><br><br><br>
+
+			<div class="container">
+				<h2>Recommendations for you</h2>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item ">
+                      <a class="nav-link active" href="#beaches"
+                        role="tab" data-toggle="tab"><span style="font-size:1.2em">Beaches</span></a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link " color="black" href="#resorts" role="tab"
+                        data-toggle="tab"><span style="font-size:1.2em">Resorts</span></a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link " href="#churches" role="tab"
+                        data-toggle="tab"><span style="font-size:1.2em">Churches</span></a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+    				 <div role="tabpanel" class="tab-pane fade show active" id="beaches">
+                        <h2>Beaches</h2>
+                        <div id="beaches-set" class="container-fluid"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="resorts">
+                        <h2>Resorts</h2>
+                        <div id="resorts-set" class="container-fluid"></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="churches">
+                        <h2>Churches</h2>
+                        <div id="churches-set" class="container-fluid"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
